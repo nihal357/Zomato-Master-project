@@ -6,7 +6,7 @@ import { RiSearch2Line } from "react-icons/ri";
 
 const MobileNav = () => {
     return (<>
-        <div className="flex w-full items-center justify-between md:hidden">
+        <div className="flex w-full items-center justify-between lg:hidden">
             <div className="w-28">
                 <img
                     src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
@@ -27,42 +27,44 @@ const MobileNav = () => {
 const LargeNav = () => {
     return (
         <>
-            <div className="hidden gap-4 md:flex w-full items-center justify-between lg:w-3/4">
-                <div className="w-28">
-                    <img
-                        src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-                        alt="logo"
-                        className="w-full h-full"
-                    />
-                </div>
-                <div className="w-full bg-white shadow-md p-3 flex items-center gap-3 border border-gray-200 rounded">
-                    <div className="flex items-center gap-2 border-r-2 border-gray-300 pr-2">
-                        <span className="text-zomato-400">
-                            <HiLocationMarker />
-                        </span>
-                        <input
-                            type="text"
-                            placeholder="Nagpur"
-                            className=" focus:outline-none"
-                        />
-                        <IoMdArrowDropdown />
-                    </div>
-                    <div className="flex w-full items-center gap-2">
-                        <RiSearch2Line />
-                        <input
-                            type="search"
-                            placeholder="Search for restaurant, cuisine or a dish"
-                            className="w-full focus:outline-none"
+            <div className="container px-40 mx-auto">
+                <div className="hidden gap-4 lg:flex w-full items-center justify-between ">
+                    <div className="w-28">
+                        <img
+                            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+                            alt="logo"
+                            className="w-full h-full"
                         />
                     </div>
-                </div>
-                <div className="flex gap-2">
-                    <button className="text-gray-500 text-xl hover:text-gray-800">
-                        Login
-                    </button>
-                    <button className="text-gray-500 text-xl hover:text-gray-800">
-                        Signup
-                    </button>
+                    <div className="w-3/4 bg-white shadow-md p-3 flex items-center gap-3 border border-gray-200 rounded">
+                        <div className="flex items-center gap-2 border-r-2 border-gray-300 pr-2">
+                            <span className="text-zomato-400">
+                                <HiLocationMarker />
+                            </span>
+                            <input
+                                type="text"
+                                placeholder="Nagpur"
+                                className=" focus:outline-none"
+                            />
+                            <IoMdArrowDropdown />
+                        </div>
+                        <div className="flex w-full items-center gap-2">
+                            <RiSearch2Line />
+                            <input
+                                type="search"
+                                placeholder="Search for restaurant, cuisine or a dish"
+                                className="w-full focus:outline-none"
+                            />
+                        </div>
+                    </div>
+                    <div className="flex gap-6 ml-28">
+                        <button className="text-gray-400 text-xl hover:text-gray-700">
+                            Login
+                        </button>
+                        <button className="text-gray-400 text-xl hover:text-gray-700">
+                            Signup
+                        </button>
+                    </div>
                 </div>
             </div>
         </>

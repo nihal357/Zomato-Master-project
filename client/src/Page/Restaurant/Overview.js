@@ -1,16 +1,33 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { IoMdArrowDropright } from "react-icons/io";
+import Slider from 'react-slick';
+import ReactStars from "react-rating-stars-component";
 
 // components
 import MenuCollection from '../../Components/restaurant/MenuCollection';
+import MenuSimilarRestaurantcard from '../../Components/restaurant/MenuSimilarRestaurantcard';
+import { NextArrow, PrevArrow } from '../../Components/CarousalArrow';
 
 const Overview = () => {
     const { id } = useParams();
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+    };
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+    };
     return (
         <>
             <div className="flex flex-col md:flex-row relative">
-                <div className="w-full ">
+                <div className="w-full md:w-8/12 ">
                     <h2 className="font-semibold text-lg md:text-xl my-4">About this Place</h2>
                     <div className="flex justify-between items-center">
                         <h4 className="text-lg font-medium">
@@ -53,11 +70,40 @@ const Overview = () => {
                         <h4 className="text-lg font-medium">
                             Similar Restaurants
                         </h4>
+                        <Slider {...settings}>
+                            <MenuSimilarRestaurantcard
+                                image="https://b.zmtcdn.com/data/pictures/chains/8/3300548/34cadd8512159e3e56563c607c73103b_featured_v2.jpg"
+                                title="Shabana Bakery"
+                            />
+                            <MenuSimilarRestaurantcard
+                                image="https://b.zmtcdn.com/data/pictures/chains/8/3300548/34cadd8512159e3e56563c607c73103b_featured_v2.jpg"
+                                title="Shabana Bakery"
+                            />
+                            <MenuSimilarRestaurantcard
+                                image="https://b.zmtcdn.com/data/pictures/chains/8/3300548/34cadd8512159e3e56563c607c73103b_featured_v2.jpg"
+                                title="Shabana Bakery"
+                            />
+                            <MenuSimilarRestaurantcard
+                                image="https://b.zmtcdn.com/data/pictures/chains/8/3300548/34cadd8512159e3e56563c607c73103b_featured_v2.jpg"
+                                title="Shabana Bakery"
+                            />
+                        </Slider>
+                    </div>
+                    <div className="my-4">
+                        <h4 className="text-lg font-medium">
+                            Rate your experience for
+                        </h4>
+                        <ReactStars
+                            count={5}
+                            onChange={ratingChanged}
+                            size={24}
+                            activeColor="#ffd700"
+                        />
                     </div>
                 </div>
                 <aside
                     style={{ height: "fit-content" }}
-                    className="hidden md:block md:w-2/5 sticky top-2 bg-white p-3 shadow-xl"></aside>
+                    className="hidden md:block md:w-4/12 sticky top-2 bg-white p-3 shadow-xl"></aside>
             </div>
         </>
     );

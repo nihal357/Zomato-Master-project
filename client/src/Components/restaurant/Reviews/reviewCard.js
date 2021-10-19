@@ -39,7 +39,14 @@ const ReviewCard = () => {
                     </div>
                     <div className="w-full">
                         <p className="w-full text-gray-600 font-light text-base">
-                            good service
+                            Biryani House perfect for biryani lovers. Biryani was testy.
+                            Food Quality and Quantity was Awesome.
+                            
+                            Food Item :
+                            Chicken Dum Biryani : 5/5
+
+                            Food Quality : 5/5
+                            Food Quantity : 5/5
                         </p>
                     </div>
                 </div>

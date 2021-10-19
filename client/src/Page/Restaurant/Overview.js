@@ -45,7 +45,14 @@ const Overview = () => {
                         <MenuCollection
                             menuTitle="Menu"
                             pages="3"
-                            image="https://b.zmtcdn.com/data/menus/890/19242890/bd0489816e78ae3296de4b6504b65e07.jpg"
+                            image={
+                                [
+                                    "https://b.zmtcdn.com/data/menus/200/3301200/054a2a2a79ef2a6df277066a0c6204ab.jpg",
+                                    "https://b.zmtcdn.com/data/menus/200/3301200/054a2a2a79ef2a6df277066a0c6204ab.jpg",
+                                    "https://b.zmtcdn.com/data/menus/200/3301200/a3004a6903bab13d8c03e5a27964538a.jpg",
+                                    "https://b.zmtcdn.com/data/menus/200/3301200/c59e82a916f4ad94abf164ac7f518b77.jpg",
+                                ]
+                            }
                         />
                     </div>
                     <h4 className="text-lg font-medium my-4">

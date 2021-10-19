@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 
-const MenuCollection = (props) => {
+const PhotosCollection = (props) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [CurrentImg, setCurrentImg] = useState(0);
     const closeViewer = () => setIsMenuOpen(false);
@@ -28,13 +28,9 @@ const MenuCollection = (props) => {
                         className="w-full h-full transform transition duration-400 rounded-lg hover:scale-110"
                     />
                 </div>
-                <div>
-                    <strong>{props.menuTitle}</strong>
-                    <p>{props.pages} Pages</p>
-                </div>
             </div>
         </>
     );
 };
 
-export default MenuCollection;
+export default PhotosCollection;
